@@ -1,13 +1,11 @@
+% !TEX program = xelatex
 \documentclass[12pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 % --- XeLatex/LuaLatex ---
 \usepackage[no-math]{fontspec}
-\setmainfont[
-	UprightFont = * Light,
-	ItalicFont  = * Light Italic,
-	BoldFont    = * Regular,
-	BoldItalicFont = * Italic
-	]{Fira Sans}
+\IfFontExistsTF{Fira Sans}{
+	\setmainfont{Fira Sans}
+}
 \usepackage[bahasa]{babel}
 \usepackage{booktabs}
 %\renewcommand{\familydefault}{\sfdefault}
