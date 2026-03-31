@@ -1,15 +1,13 @@
+% !TEX program = xelatex
 \documentclass[12pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 %\usepackage{tgpagella, eulervm}
 
 % --- XeLatex/LuaLatex ---
 \usepackage[no-math]{fontspec}
-\setmainfont[
-	UprightFont = * Light,
-	ItalicFont  = * Light Italic,
-	BoldFont    = * Regular,
-	BoldItalicFont = * Italic
-	]{Fira Sans}
+\IfFontExistsTF{Fira Sans}{
+	\setmainfont{Fira Sans}
+}
 
 % % --- This is for pdflatex ---
 %\usepackage[light, sfdefault]{FiraSans}
